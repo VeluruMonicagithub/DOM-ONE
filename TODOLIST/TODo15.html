@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic To-Do List</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #todoList{
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+        #todoList li{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+        .task-text{
+            flex-grow: 1;
+            margin-right: 15px;
+        }
+        .completed .task-text{
+            text-decoration: line-through;
+            color: gray;
+        }
+        .actions button{
+            margin-left: 8px;
+            padding: 5px 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .delete-btn{
+            background-color: #ff6347;
+            color: white;
+        }
+        .complete-btn{
+            background-color: #4CAF50;
+            color: white;
+        }
+        .complete-btn.undo{
+            background-color: #ffc107;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>To-Do List</h1>
+
+    <input type="text" id="taskInput" placeholder="Enter a new task..." style="padding: 8px; width: 300px;">
+    <button id="addTaskBtn" style="padding: 8px 15px;">Add Task</button>
+
+    <ul id="todoList">
+    </ul>
+
+    <script src="ToDo.js"></script>
+</body>
+</html>
